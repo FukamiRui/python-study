@@ -1,2 +1,3 @@
-# python-study
-My history of studying Python
+# study-log
+My log of studying with Python:
+   
