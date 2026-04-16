@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        
+        <script src="fastapi_practice.js"></script>
+        <script>
+                async function postIphone() {
+                    const version = document.getElementById("version").value;
+                    const price = document.getElementById("price").value;
+
+                    const response = await fetch("http://127.0.0.1:8000/iphone",
+                    {
+                        method: "POST",
+                        headers: {"Content-Type": "application/json"},
+                        body: JSON.stringify({
+                            version: parseInt(version),
+                            price: parseInt(price)
+                        })
+                    });
+
+                    const data = await response.json();
+                    document.getElementById("message").innerText = data.message;
+                    console.log("success:", data)
+
+                }
+
+        </script>
+    </body>
+</html>
