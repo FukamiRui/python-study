@@ -1,0 +1,33 @@
+Day 1: Foundation & Frontend Integration
+
+Key Achievements: 
+- Bootstrapped a RESTful API using FastAPI.
+- Implemented full CRUD functionality using Python dictionaries as a temporary data store
+- Established connection between HTML frontend and FastAPI backend.
+
+Self-Reflection:  
+- Encountered and resolved CORS (Cross-Origin Resource Sharing) issues.
+- I dentified that improper JSON formatting in return statements was the root cause of frontend communication errors.
+
+Next Steps:  
+- Migrate from in-memory dictionaries to a persistent SQL database to ensure data durability.
+- Implement efficient query logic to reduce memory overhead.
+
+Day 2: Database Integration & Modular Architecture
+
+Key Achievements: 
+- Successfully integrated SQLite for persistent data management.
+- Refactored the codebase into a modular architecture (main.py, models.py, database.py). This enhances scalability, 
+  debugging efficiency and overall readability.
+- Extended data schemas to include attributes like age and phoneNumber within Pydantic models.
+- Expanded the system to handle multiple entities (e.g., Iphone and Workers models).
+
+Self-Reflection: 
+- Self-Rating: 8/10. 
+- Gained proficiency in basic SQL operations and Python DB-API.
+- Recognized the need for more robust Error Handling (e.g., HTTP exceptions for 404/500 errors).
+
+Next Steps: 
+- Level up the infrastructure by migrating to PostgreSQL for enterprise-grade scalability.
+- Containerize the application using Docker to ensure environment consistency across different systems.
+- Conduct a "Chaos Engineering" session: intentionally trigger errors to identify and handle edge cases.
