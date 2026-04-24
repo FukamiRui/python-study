@@ -1,4 +1,4 @@
-Day 1: Foundation & Frontend Integration
+Day 1: Foundation & Frontend Integration -----------------------------------------------------------------
 
 Key Achievements: 
 - Bootstrapped a RESTful API using FastAPI.
@@ -13,7 +13,7 @@ Next Steps:
 - Migrate from in-memory dictionaries to a persistent SQL database to ensure data durability.
 - Implement efficient query logic to reduce memory overhead.
 
-Day 2: Database Integration & Modular Architecture
+Day 2: Database Integration & Modular Architecture -----------------------------------------------------------------
 
 Key Achievements: 
 - Successfully integrated SQLite for persistent data management.
@@ -31,3 +31,30 @@ Next Steps:
 - Level up the infrastructure by migrating to PostgreSQL for enterprise-grade scalability.
 - Containerize the application using Docker to ensure environment consistency across different systems.
 - Conduct a "Chaos Engineering" session: intentionally trigger errors to identify and handle edge cases.
+
+Day 3 - 4: Infrastructure Modernization & Containerization -----------------------------------------------------------------
+
+Key Achievements:
+
+Database Migration: Successfully migrated the data persistence layer from SQLite to PostgreSQL, an enterprise-grade relational database. This transition involved refactoring the connection logic in database.py while maintaining the ORM integrity established with SQLAlchemy.
++1
+
+Containerization with Docker: Implemented Docker Compose to orchestrate the FastAPI application and PostgreSQL database as independent, interconnected services. This ensures environment consistency and eliminates the "it works on my machine" problem by providing a portable, reproducible infrastructure.
+
+Backend Refinement: Consolidated database configurations and established a robust connection pipeline using Data Source Names (DSN). Integrated Base.metadata.create_all to automate table generation upon container startup, ensuring the database schema is always in sync with the models.
+
+Self-Reflection:
+
+Self-Rating: 9/10.
+
+Deepened understanding of Docker networking and port forwarding, particularly through troubleshooting OperationalError: Connection refused issues. The process of resolving these connectivity hurdles significantly boosted my infrastructure debugging skills.
+
+Identified a security vulnerability regarding hardcoded credentials in docker-compose.yml and database.py. This highlighted the immediate need for environment variable management (e.g., using .env files) to align with industry security standards.
+
+Next Steps:
+
+Defense-in-Depth: Implement strict input validation using Pydantic’s Field to prevent system failures caused by malicious or malformed data.
+
+Security & Authentication: Integrate JWT (JSON Web Token) authentication to secure the API and restrict sensitive operations (POST/DELETE) to authorized users only.
+
+Automated Testing: Introduce pytest to establish a suite of unit tests, ensuring that new features do not introduce regressions into the existing codebase.
