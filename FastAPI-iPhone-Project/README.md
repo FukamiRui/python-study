@@ -11,7 +11,14 @@
 - **Data Modeling**: Extended Pydantic models to include `phoneNumber` and `birthDay`.
 - **Error Handling**: Implemented custom `HTTPException` for robust API responses.
 
+### Day 3 - 4: Infrastructure Modernization & Frontend (Current)
+- **PostgreSQL Migration**: Upgraded from SQLite to an enterprise-grade **PostgreSQL** database via SQLAlchemy ORM.
+- **Containerization**: Implemented **Docker Compose** to orchestrate independent containers for the FastAPI app and PostgreSQL.
+- **Frontend Integration**: Established a dynamic connection between the HTML/JS frontend and backend using the **Fetch API**.
+- **Robust Engineering**: Implemented **Database Rollbacks** and guard clauses to ensure system stability and data integrity during failures.
+
 ## 🛠 Tech Stack
-- **Framework**: FastAPI
-- **Database**: SQLite (Planned migration to PostgreSQL)
-- **Container**: Docker (Upcoming)
+- **Framework**: FastAPI (Python)
+- **Database**: PostgreSQL (Containerized)
+- **Container**: Docker / Docker Compose
+- **Frontend**: JavaScript (ES6+), HTML5
